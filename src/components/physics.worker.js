@@ -399,7 +399,7 @@ const addBoxToWorld = (size, height) => {
 
 	const wallRightTransform = new Ammo.btTransform()
 	wallRightTransform.setIdentity()
-	wallRightTransform.setOrigin(setVector3((size * aspect / -2) + .5, 0, 0))
+	wallRightTransform.setOrigin(setVector3((size * aspect / -2), 0, 0))
 	const wallRightShape = new Ammo.btBoxShape(setVector3(1, height, size))
 	const rightMotionState = new Ammo.btDefaultMotionState(wallRightTransform)
 	const rightInfo = new Ammo.btRigidBodyConstructionInfo(0, rightMotionState, wallRightShape, localInertia)
@@ -412,7 +412,7 @@ const addBoxToWorld = (size, height) => {
 
 	const wallLeftTransform = new Ammo.btTransform()
 	wallLeftTransform.setIdentity()
-	wallLeftTransform.setOrigin(setVector3((size * aspect / 2) - .5, 0, 0))
+	wallLeftTransform.setOrigin(setVector3((size * aspect / 2), 0, 0))
 	const wallLeftShape = new Ammo.btBoxShape(setVector3(1, height, size))
 	const leftMotionState = new Ammo.btDefaultMotionState(wallLeftTransform)
 	const leftInfo = new Ammo.btRigidBodyConstructionInfo(0, leftMotionState, wallLeftShape, localInertia)
